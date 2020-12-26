@@ -1,0 +1,27 @@
+input.search-bar {
+  width: 50%;
+  background-color: white;
+  color: black;
+  display: block;
+  position: absolute;
+  top: 13%;
+  left: 50%;
+  transform: translate(-50%);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.discover button {
+  display: block;
+  margin: 0 auto;
+  height:30px;
+  width:130px;
+}
+
+.project {
+  border: 1px solid lightgray;
+  margin: 50px auto;
+  width:60%;
+  height:100%;
+  border-radius: 8px;
+}

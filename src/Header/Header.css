@@ -1,0 +1,25 @@
+.nav-bar {
+    width:100%;
+}
+
+h1.title, h3.nav{
+    display:inline-block;
+    margin:18px;
+    color:#ccc;
+}
+
+div.nav-bar h3.nav{
+    float:right;
+    text-decoration: underline;
+    margin-top: 15px;
+    margin-top:25px;
+}
+
+h1.title{
+    float:left;
+    margin-top:15px;
+}
+
+.nav-bar{
+    padding-bottom:130px;
+}
