@@ -1,0 +1,19 @@
+.app h1 {
+  text-align:center;
+  color: #282c34;
+  margin-top:50px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+
+.app img.earth {
+  display:block;
+  margin:0 auto;
+}
+
+.app button {
+  display:block;
+  margin: 45px auto;
+  height:30px;
+  width:130px;
+}
+
