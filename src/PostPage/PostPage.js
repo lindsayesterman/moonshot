@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Header from "../Header/Header.js";
-import "./Post.css";
+import "./PostPage.css";
 
 export default class Post extends Component {
   render() {

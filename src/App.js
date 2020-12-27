@@ -4,9 +4,24 @@ import "./App.css";
 import { Route, Link } from "react-router-dom";
 import Header from "./Header/Header.js";
 import Discover from "./Discover/Discover";
-import Post from "./Post/Post";
+import Post from "./PostPage/PostPage";
+import ProjectPage from './ProjectPage/ProjectPage'
 
 export default class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      posts: []
+    }
+  }
+
+  addPost = (post) => {
+    this.setState ({
+      posts: [this.state.posts, post]
+    })
+    console.log(`post -- ${JSON.stringify(post)}`)
+  }
+
   render() {
     return (
       <div class="app">
@@ -28,6 +43,7 @@ export default class App extends Component {
         </Route>
         <Route path="/discover" component={Discover}></Route>
         <Route path="/post" component={Post}></Route>
+        <Route path="/project" component={ProjectPage}></Route>
       </div>
     );
   }

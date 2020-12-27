@@ -1,0 +1,8 @@
+.project {
+    border: 1px solid lightgray;
+    margin: 50px auto;
+    width:60%;
+    height:100%;
+    border-radius: 8px;
+    padding:20px;
+  }

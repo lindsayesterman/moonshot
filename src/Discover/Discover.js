@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./Discover.css";
 import Header from "../Header/Header";
+import Project from '../Project/Project'
 
 export default class Discover extends Component {
   render() {
@@ -13,11 +14,7 @@ export default class Discover extends Component {
           placeholder="Search.."
         ></input>
         <button type="submit">Search</button>
-        <div className="project">
-            <h1>Name</h1>
-            <h3>Description</h3>
-            <h4>Author</h4>
-        </div>
+        <Project />
       </div>
     );
   }

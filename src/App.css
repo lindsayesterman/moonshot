@@ -2,6 +2,7 @@ body {
   background: #304352;
   background: -webkit-linear-gradient(to right, #d7d2cc, #304352);
   background: linear-gradient(to right, #d7d2cc, #304352);
+  margin-bottom: 100px;
 }
 
 .app h1.front-page-descrip {
@@ -13,7 +14,6 @@ body {
 .app img.earth {
   display: block;
   margin: 0 auto;
-  margin-bottom: 100px;
 }
 
 .app .button-holder {
