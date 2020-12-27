@@ -1,21 +1,35 @@
-h1.title, h3.nav{
-    display:inline-block;
-    margin:18px;
-    color:white;
+h1.title,
+h3.nav {
+  display: inline-block;
+  margin: 18px;
+  color: white;
 }
 
-div.nav-bar h3.nav{
-    float:right;
-    text-decoration: underline;
-    margin-top: 15px;
-    margin-top:25px;
+div.nav-bar h3.nav {
+  float: right;
+  text-decoration: underline;
+  margin-top: 15px;
+  margin-top: 25px;
 }
 
-h1.title{
-    float:left;
-    margin-top:15px;
+
+h1.title {
+  float: left;
+  margin-top: 15px;
 }
 
-.nav-bar{
-    padding-bottom:130px;
+.nav-bar {
+  padding-bottom: 150px;
+}
+
+@media (max-width: 500px) {
+  h1.title {
+    font-size: 22px;
+    margin:20px 0px;
+  }
+  h3.nav {
+    font-size: 16px;
+    margin:10px;
+  }
+  
 }

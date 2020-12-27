@@ -13,7 +13,7 @@ export default class App extends Component {
         <Route exact path="/">
           <Header />
           <h1 className="front-page-descrip">
-            Find real problems, real easily. Sort by topic, date added, or
+            Find projects to help build your portfolio. Sort by topic, difficulty level, or
             likes.
           </h1>
           <Link to="/discover" style={{textDecoration: 'none'}} >

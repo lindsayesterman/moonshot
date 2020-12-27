@@ -34,3 +34,15 @@ button.btn-post {
   height: 30px;
   background-color: #aaa;
 }
+
+@media (max-width: 600px) {
+  .project-proposal {
+    width: 70%;
+    height:400px;
+  }
+  input,
+  textarea,
+  button {
+    width: 80%;
+  }
+}

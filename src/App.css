@@ -1,26 +1,33 @@
 body {
-  
-  background: #304352; 
-  background: -webkit-linear-gradient(to right, #d7d2cc, #304352);  
-  background: linear-gradient(to right, #d7d2cc, #304352); 
-}  
-  .app h1.front-page-descrip {
-  text-align:center;
+  background: #304352;
+  background: -webkit-linear-gradient(to right, #d7d2cc, #304352);
+  background: linear-gradient(to right, #d7d2cc, #304352);
 }
 
-.app img.earth {
-  display:block;
+.app h1.front-page-descrip {
+  text-align: center;
+  width:80%;
   margin:0 auto;
 }
 
+.app img.earth {
+  display: block;
+  margin: 0 auto;
+}
+
 .app button.start {
-  display:block;
+  display: block;
   margin: 40px auto;
-  height:30px;
-  width:130px;
-  background-color:white;
-  border:transparent;
-  color:black;
+  height: 30px;
+  width: 130px;
+  background-color: white;
+  border: transparent;
+  color: black;
   border-radius: 5px;
 }
 
+@media (max-width: 500px) {
+  .app h1.front-page-descrip {
+    font-size:23px;
+  }
+}
