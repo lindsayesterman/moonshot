@@ -1,8 +1,10 @@
-* {
-  background-color: #2f2f2f;
-}
-
-.app h1.front-page-descrip {
+body {
+  
+  background: #304352; 
+  background: -webkit-linear-gradient(to right, #d7d2cc, #304352);  
+  background: linear-gradient(to right, #d7d2cc, #304352); 
+}  
+  .app h1.front-page-descrip {
   text-align:center;
 }
 
@@ -16,8 +18,9 @@
   margin: 40px auto;
   height:30px;
   width:130px;
-  background-color:#00B2B3;
+  background-color:white;
   border:transparent;
   color:black;
+  border-radius: 5px;
 }
 

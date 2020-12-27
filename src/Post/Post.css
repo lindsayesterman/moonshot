@@ -1,0 +1,36 @@
+.project-proposal {
+  display: block;
+  margin: 0 auto;
+  padding: 50px 40px;
+  color: white;
+  width: 45%;
+  height: 300px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+}
+
+h1.post-h1 {
+  text-align: center;
+}
+
+input,
+textarea {
+  display: block;
+  margin: 20px auto;
+  width: 50%;
+  height: 30px;
+  padding: 10px;
+}
+
+textarea {
+  height: 70px;
+  resize: none;
+}
+
+button.btn-post {
+  display: block;
+  margin: 20px auto;
+  width: 54%;
+  height: 30px;
+  background-color: #aaa;
+}

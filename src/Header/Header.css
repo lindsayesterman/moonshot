@@ -1,11 +1,7 @@
-.nav-bar {
-    width:100%;
-}
-
 h1.title, h3.nav{
     display:inline-block;
     margin:18px;
-    color:#ccc;
+    color:white;
 }
 
 div.nav-bar h3.nav{
