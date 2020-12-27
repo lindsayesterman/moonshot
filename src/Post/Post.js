@@ -12,7 +12,7 @@ export default class Post extends Component {
           <div className="form-input-material">
             <input
               type="text"
-              name="name"
+              name="project-name"
               id="name"
               placeholder="Screen Time Saver"
               required

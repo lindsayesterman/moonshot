@@ -38,7 +38,7 @@ button.btn-post {
 @media (max-width: 600px) {
   .project-proposal {
     width: 70%;
-    height:400px;
+    height: 400px;
   }
   input,
   textarea,

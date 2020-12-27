@@ -6,28 +6,40 @@ body {
 
 .app h1.front-page-descrip {
   text-align: center;
-  width:80%;
-  margin:0 auto;
+  width: 80%;
+  margin: 0 auto;
 }
 
 .app img.earth {
   display: block;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 
-.app button.start {
-  display: block;
-  margin: 40px auto;
-  height: 30px;
+.app .button-holder {
+  display: table;
+  margin: 0 auto;
+}
+
+.app button.start-browsing, .app button.start-posting{
+  display: inline-block;
+  margin: 40px 10px;
+  height: 40px;
   width: 130px;
   background-color: white;
   border: transparent;
   color: black;
-  border-radius: 5px;
+  border-radius: 2px;
+}
+
+.app button.start-posting {
+  background-color: transparent;
+  border: 1px solid black;
+  color: white;
 }
 
 @media (max-width: 500px) {
   .app h1.front-page-descrip {
-    font-size:23px;
+    font-size: 23px;
   }
 }
