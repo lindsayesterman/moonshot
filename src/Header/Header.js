@@ -13,7 +13,7 @@ export default class Header extends Component {
           <h3 className="nav">Discover</h3>
         </Link>
         <Link to="/post">
-          <h3 className="nav">Post Proposal</h3>
+          <h3 className="nav">Post</h3>
         </Link>
       </div>
     );

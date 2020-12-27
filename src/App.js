@@ -18,7 +18,7 @@ export default class App extends Component {
           </h1>
           <div className="button-holder">
             <Link to="/discover" style={{ textDecoration: "none" }}>
-              <button className="start-browsing">Build Portfolio</button>
+              <button className="start-browsing">Find ideas</button>
             </Link>
             <Link to="/post" style={{ textDecoration: "none" }}>
               <button className="start-posting">Post Ideas </button>
