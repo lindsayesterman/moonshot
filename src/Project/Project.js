@@ -5,12 +5,10 @@ import { Link } from "react-router-dom";
 export default class Project extends Component {
   render() {
     return (
-      <Link style={{textDecoration:'none'}} to={`/project`}>
         <div className="project">
-          <h1>Name</h1>
-          <h3>Description</h3>
+          <h1>{this.props.name}</h1>
+          <h3>{this.props.description}</h3>
         </div>
-      </Link>
     );
   }
 }

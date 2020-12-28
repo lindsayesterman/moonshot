@@ -1,14 +1,13 @@
-.project-page {
-    padding:60px;
+.container-info {
     width:60%;
     margin:0 auto;
 }
 
-.project-page h1 {
+.project-page h1.info {
     text-align:center;
     padding-bottom:30px;
 }
 
-.project-page h3, .project-page h4 {
+.project-page h3.info, .project-page h4.info {
     margin:40px auto;
 }
