@@ -70,14 +70,21 @@ export default class App extends Component {
             </div>
             <img className="earth" src={earth}></img>
           </Route>
-          <Route path="/post" component={Post} />
           <Route
             path="/discover"
             render={(routeProps) => {
               return <Discover projects={context.projects} {...routeProps} />;
             }}
           />
-          <Route path="/project" component={ProjectPage}></Route>
+          <Route path="/post" component={Post} />
+          <Route
+            path="/project/:projectId"
+            render={(routeProps) => {
+              return (
+                <ProjectPage projects={context.projects} {...routeProps} />
+              );
+            }}
+          />
         </div>
       </PostsContext.Provider>
     );
