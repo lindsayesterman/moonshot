@@ -21,7 +21,8 @@ body {
   margin: 0 auto;
 }
 
-.app button.start-browsing, .app button.start-posting{
+.app button.start-browsing,
+.app button.start-posting {
   display: inline-block;
   margin: 40px 10px;
   height: 40px;
