@@ -76,7 +76,12 @@ export default class App extends Component {
               return <Discover projects={context.projects} {...routeProps} />;
             }}
           />
-          <Route path="/post" component={Post} />
+          <Route
+            path="/post"
+            render={(routeProps) => {
+              return <Post projects={context.projects} {...routeProps} />;
+            }}
+          />
           <Route
             path="/project/:projectId"
             render={(routeProps) => {

@@ -42,7 +42,7 @@ export default class Post extends Component {
         this.context.addProject(data);
         console.log(this.context.projects)
         console.log(this.props.projects);
-        this.props.history.push(`/discover`);
+        this.props.history.push(`/project/${data.id}`);
       })
       .catch((error) => {
         this.setState({ error });
