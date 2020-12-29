@@ -14,7 +14,7 @@ export default class ProjectPage extends Component {
   static contextType = PostsContext;
 
   render() {
-    const { projects = [] } = this.context
+    const { projects = [] } = this.props
     const { projectId } = this.props.match.params;
     const project = findProject(projects, parseFloat(projectId))
     return (

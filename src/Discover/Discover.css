@@ -1,17 +1,10 @@
-input.search-bar {
+select#sort {
   width: 50%;
   background-color: white;
   color: black;
   display: block;
   padding: 8px;
+  margin:0 auto;
   border-radius: 8px;
-}
-
-.discover button {
-  display: block;
-  margin: 0 auto;
-  height:30px;
-  width:130px;
-  background-color:#304352;
 }
 

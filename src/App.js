@@ -83,7 +83,7 @@ export default class App extends Component {
             }}
           />
           <Route
-            path="/project/:projectId"
+            path="/projects/:projectId"
             render={(routeProps) => {
               return (
                 <ProjectPage projects={context.projects} {...routeProps} />
