@@ -5,11 +5,20 @@ import config from "../config.js";
 import PostsContext from "../postsContext";
 
 export default class Post extends Component {
-  state = {
-    error: null,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+    };
+    this.state = { value: "other" };
+    this.handleSortChange = this.handleSortChange.bind(this);
+  }
 
   static contextType = PostsContext;
+
+  handleSortChange(event) {
+    this.setState({ value: event.target.value });
+  }
 
   handlePostProject = (e) => {
     e.preventDefault();
@@ -17,7 +26,7 @@ export default class Post extends Component {
       name: e.target["name"].value,
       description: e.target["description"].value,
       features: e.target["features"].value,
-      //topic: e.target["topic"].value,
+      topic: e.target["topic"].value,
       author: e.target["author"].value,
       date_created: new Date(),
     };
@@ -40,9 +49,9 @@ export default class Post extends Component {
       .then((data) => {
         console.log(data);
         this.context.addProject(data);
-        console.log(this.context.projects)
+        console.log(this.context.projects);
         console.log(this.props.projects);
-        this.props.history.push(`/project/${data.id}`);
+        this.props.history.push(`/projects/${data.id}`);
       })
       .catch((error) => {
         this.setState({ error });
@@ -81,12 +90,16 @@ export default class Post extends Component {
               id="features"
               placeholder="Make friends, compete for times."
             />
-            <input
-              type="text"
-              name="topic"
-              id="topic"
-              placeholder="Technology"
-            />
+            <select id="topic" value={this.state.value} onChange={this.handleSortChange}>
+              <option value="academic">Academic</option>
+              <option value="athletics">Athletics</option>
+              <option value="art">Art/Music</option>
+              <option value="community">Community Service</option>
+              <option value="tech">Computer/Technology</option>
+              <option value="social">Social</option>
+              <option value="work">Work</option>
+              <option value="other">Other</option>
+            </select>
             <input
               type="text"
               name="author"

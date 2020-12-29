@@ -14,13 +14,18 @@ h1.post-h1 {
 }
 
 input,
-textarea {
+textarea, select {
   display: block;
   margin: 25px auto;
   width: 75%;
   height: 30px;
   padding: 10px;
   color:black;
+}
+
+select {
+  height:50px;
+  width:78%;
 }
 
 textarea {
@@ -43,7 +48,7 @@ button.btn-post {
   }
   input,
   textarea,
-  button {
+  button, select {
     width: 80%;
   }
 }

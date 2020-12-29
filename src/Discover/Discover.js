@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 export default class Discover extends Component {
   constructor(props) {
     super(props);
-    this.state = { sort: "date" };
-
+    this.state = { value: "date" };
     this.handleSortChange = this.handleSortChange.bind(this);
   }
 
@@ -31,7 +30,6 @@ export default class Discover extends Component {
         >
           <option value="date">Date Created</option>
           <option value="likes">Most liked</option>
-          <option value="topic">Technology</option>
           <option value="academic">Academic</option>
           <option value="athletics">Athletics</option>
           <option value="art">Art/Music</option>
