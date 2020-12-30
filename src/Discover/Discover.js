@@ -20,6 +20,7 @@ export default class Discover extends Component {
 
   render() {
     const { projects = [] } = this.context;
+    console.log(projects)
     return (
       <div className="discover">
         <Header />

@@ -51,7 +51,7 @@ export default class Post extends Component {
         this.context.addProject(data);
         console.log(this.context.projects);
         console.log(this.props.projects);
-        this.props.history.push(`/projects/${data.id}`);
+        window.location.href=`/discover`
       })
       .catch((error) => {
         this.setState({ error });
@@ -90,7 +90,11 @@ export default class Post extends Component {
               id="features"
               placeholder="Make friends, compete for times."
             />
-            <select id="topic" value={this.state.value} onChange={this.handleSortChange}>
+            <select
+              id="topic"
+              value={this.state.value}
+              onChange={this.handleSortChange}
+            >
               <option value="academic">Academic</option>
               <option value="athletics">Athletics</option>
               <option value="art">Art/Music</option>
