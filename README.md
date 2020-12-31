@@ -1,3 +1,5 @@
 # Project Finder
 
-Browse through project ideas to build your portfolio and post some of your own.
+Browse through project ideas to build up your portfolio. 
+
+If you have some cool ideas that could help people out, post them!
