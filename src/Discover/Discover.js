@@ -6,21 +6,32 @@ import PostsContext from "../postsContext";
 import { Link } from "react-router-dom";
 
 export default class Discover extends Component {
+  static contextType = PostsContext;
+
   constructor(props) {
     super(props);
-    this.state = { value: "date" };
+    this.state = { value: "date", sortedResults: this.props.projects };
     this.handleSortChange = this.handleSortChange.bind(this);
   }
 
+  // lodash npm i lodash import {sortBy} from 'lodash' sortBy(this.context.project, 'date_created')
   handleSortChange(event) {
-    this.setState({ value: event.target.value });
+    const sortedResults = this.context.projects.sort((left, right) => {
+      console.log(this.context.project);
+      // if (left.this.context.project.id) {
+      //   return -1;
+      // } else if (right.this.context.project.id) {
+      //   return 1;
+      // } else {
+      //   return 0;
+      // }
+    });
+    this.setState({ value: event.target.value, sortedResults });
   }
 
-  static contextType = PostsContext;
-
   render() {
-    const { projects = [] } = this.context;
-    console.log(projects)
+    const projects = this.state.sortedResults;
+    console.log(projects);
     return (
       <div className="discover">
         <Header />
