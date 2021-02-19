@@ -22,10 +22,10 @@ export default class ProjectPage extends Component {
         <Header />
         <div className="container-info">
         <h1 className="info">{project.name}</h1>
-        <h3 className="info">{project.description}</h3>
-        <h3 className="info">{project.features}</h3>
-        <h3 className="info">{project.topic}</h3>
-        <h4 className="info">{project.author}</h4>
+        <h3 className="info">Description: {project.description}</h3>
+        <h3 className="info">Features: {project.features}</h3>
+        <h3 className="info">Topic: {project.topic}</h3>
+        <h3 className="info">Creator: {project.author}</h3>
         {/* <p className="info">Likes:</p> */}
         </div>
       </div>

@@ -12,10 +12,11 @@ div.nav-bar h3.nav {
   margin-top: 25px;
 }
 
-
 h1.title {
   float: left;
   margin-top: 15px;
+  font-weight:400;
+  font-size:35px;
 }
 
 .nav-bar {

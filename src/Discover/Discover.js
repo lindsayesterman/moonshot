@@ -53,7 +53,7 @@ export default class Discover extends Component {
         </select>
         <ul className="disover-projects">
           {projects.map((project) => (
-            <Link to={`/projects/${project.id}`} key={project.id}>
+            <Link to={`/projects/${project.id}`} key={project.id} style={{ textDecoration: 'none' }}>
               <Project
                 name={project.name}
                 description={project.description}

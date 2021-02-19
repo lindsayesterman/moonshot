@@ -6,8 +6,17 @@
 .project-page h1.info {
     text-align:center;
     padding-bottom:30px;
+    font-weight:400;
 }
 
-.project-page h3.info, .project-page h4.info {
+.project-page h3.info{
     margin:40px auto;
 }
+
+
+@media (max-width: 449px) {
+    .container-info{
+        width:85%;
+    }
+  }
+  

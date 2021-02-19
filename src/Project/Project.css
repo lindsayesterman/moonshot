@@ -1,8 +1,24 @@
 .project {
-    border: 1px solid lightgray;
-    margin: 50px auto;
-    width:60%;
-    height:100%;
-    border-radius: 8px;
-    padding:20px;
+  border: 1px solid lightgray;
+  margin: 50px auto;
+  width: 60%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.project h1 {
+  text-decoration: underline;
+}
+
+@media (max-width: 449px) {
+  .project h1 {
+    font-size: 22px;
   }
+  .project h3 {
+    font-size: 15px;
+  }
+  .project {
+    width: 70%;
+  }
+}
