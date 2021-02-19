@@ -11,7 +11,11 @@ export default class Discover extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { value: "date", sortedResults: this.props.projects };
+    this.state = {
+      value: "date",
+      sortedResults: this.props.projects,
+      searched: "",
+    };
     this.handleSortChange = this.handleSortChange.bind(this);
   }
 
@@ -32,15 +36,36 @@ export default class Discover extends Component {
     this.setState({ value: event.target.value, sortedResults });
   }
 
+  handleSearchProject = (e) => {
+    e.preventDefault();
+    const { searched } = this.state;
+    const projectsFoundFromSearch = (projects = [], projectName) =>
+      projects.filter((project) => project.name.toLowerCase().includes(projectName.toLowerCase()));
+    let sortedResults = projectsFoundFromSearch(this.props.projects, searched);
+    this.setState({ sortedResults });
+  };
+
+  updateSearchHandle = (e) => {
+    this.setState({ searched: e.target.value });
+  };
+
   render() {
     const projects = this.state.sortedResults || this.context.projects;
     return (
       <div className="discover">
         <Header />
-        <input type="search" placeholder="Screentime Saver"></input>
-        <button className="subSearch" type="submit">
-          Search
-        </button>
+        <form onSubmit={(e) => this.handleSearchProject(e)}>
+          <input
+            type="text"
+            name="searched"
+            id="searched"
+            onChange={this.updateSearchHandle}
+            placeholder="Screentime Saver"
+          ></input>
+          <button className="subSearch" type="submit">
+            Search
+          </button>
+        </form>
         <select
           id="sort"
           value={this.state.value}
