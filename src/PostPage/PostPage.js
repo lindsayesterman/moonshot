@@ -51,7 +51,7 @@ export default class Post extends Component {
         this.context.addProject(data);
         console.log(this.context.projects);
         console.log(this.props.projects);
-        window.location.href=`/discover`
+        window.location.reload();
       })
       .catch((error) => {
         this.setState({ error });
