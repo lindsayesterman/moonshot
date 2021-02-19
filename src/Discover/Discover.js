@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import "./Discover.css";
 import Header from "../Header/Header";
 import Project from "../Project/Project";
-import PostsContext from "../postsContext";
+import ProjectsContext from "../ProjectsContext";
 import { Link } from "react-router-dom";
+import { sortBy } from "lodash";
 
 export default class Discover extends Component {
-  static contextType = PostsContext;
+  static contextType = ProjectsContext;
 
   constructor(props) {
     super(props);
@@ -14,33 +15,40 @@ export default class Discover extends Component {
     this.handleSortChange = this.handleSortChange.bind(this);
   }
 
-  // lodash npm i lodash import {sortBy} from 'lodash' sortBy(this.context.project, 'date_created')
   handleSortChange(event) {
-    const sortedResults = this.context.projects.sort((left, right) => {
-      console.log(this.context.project);
-      // if (left.this.context.project.id) {
-      //   return -1;
-      // } else if (right.this.context.project.id) {
-      //   return 1;
-      // } else {
-      //   return 0;
-      // }
-    });
+    let sortedResults;
+    const topicClicked = event.target.value;
+    if (event.target.value === "recent") {
+      sortedResults = sortBy(this.context.projects, ["date_created"]).reverse();
+    } else if (event.target.value === "old") {
+      sortedResults = sortBy(this.context.projects, ["date_created"]);
+    } else if (event.target.value === "alpha") {
+      sortedResults = sortBy(this.context.projects, ["name"]);
+    } else {
+      const projectWithTopic = (projects = [], projectTopic) =>
+        projects.filter((project) => project.topic === projectTopic);
+      sortedResults = projectWithTopic(this.context.projects, topicClicked);
+    }
     this.setState({ value: event.target.value, sortedResults });
   }
 
   render() {
-    const projects = this.state.sortedResults;
-    console.log(projects);
+    const projects = this.state.sortedResults || this.context.projects;
     return (
       <div className="discover">
         <Header />
+        <input type="search" placeholder="Screentime Saver"></input>
+        <button className="subSearch" type="submit">
+          Search
+        </button>
         <select
           id="sort"
           value={this.state.value}
           onChange={this.handleSortChange}
         >
-          <option value="date">Date Created</option>
+          <option value="recent">Most Recent</option>
+          <option value="old">Oldest</option>
+          <option value="alpha">Alphabetical</option>
           <option value="likes">Most liked</option>
           <option value="academic">Academic</option>
           <option value="athletics">Athletics</option>
@@ -53,7 +61,11 @@ export default class Discover extends Component {
         </select>
         <ul className="disover-projects">
           {projects.map((project) => (
-            <Link to={`/projects/${project.id}`} key={project.id} style={{ textDecoration: 'none' }}>
+            <Link
+              to={`/projects/${project.id}`}
+              key={project.id}
+              style={{ textDecoration: "none" }}
+            >
               <Project
                 name={project.name}
                 description={project.description}

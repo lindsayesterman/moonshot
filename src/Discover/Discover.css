@@ -8,3 +8,11 @@ select#sort {
   border-radius: 8px;
 }
 
+button.subSearch{
+  display: block;
+  margin:20px auto;
+  width:100px;
+  height:30px;
+  color:black;
+}
+

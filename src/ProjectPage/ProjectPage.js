@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./ProjectPage.css";
 import Header from "../Header/Header";
 import { findProject } from "../helper.js";
-import PostsContext from '../postsContext.js'
+import ProjectsContext from '../ProjectsContext.js'
 
 export default class ProjectPage extends Component {
   static defaultProps = {
@@ -11,7 +11,7 @@ export default class ProjectPage extends Component {
     },
   };
 
-  static contextType = PostsContext;
+  static contextType = ProjectsContext;
 
   render() {
     const { projects = [] } = this.props

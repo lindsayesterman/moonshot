@@ -6,8 +6,8 @@ import Header from "./Header/Header.js";
 import Discover from "./Discover/Discover";
 import Post from "./PostPage/PostPage";
 import ProjectPage from "./ProjectPage/ProjectPage";
-import PostsContext from "./postsContext";
-import config from "./config.js";
+import ProjectsContext from "./ProjectsContext";
+import config from "./config"
 
 export default class App extends Component {
   constructor(props) {
@@ -19,7 +19,7 @@ export default class App extends Component {
   }
 
   componentDidMount() {
-    Promise.all([fetch(`${config.API_ENDPOINT}/projects`)])
+    return Promise.all([fetch(`${config.API_ENDPOINT}/projects`)])
       .then(([projectsRes]) => {
         if (!projectsRes.ok)
           return projectsRes.json().then((e) => Promise.reject(e));
@@ -40,8 +40,6 @@ export default class App extends Component {
     this.setState({
       projects: [this.state.projects, project],
     });
-    console.log(`project -- ${JSON.stringify(project)}`);
-    console.log(`project -- ${JSON.stringify(this.state.projects)}`);
   };
 
   render() {
@@ -50,9 +48,10 @@ export default class App extends Component {
       addProject: (project) => {
         this.addProject(project);
       },
+      setAppData: this.setAppData,
     };
     return (
-      <PostsContext.Provider value={context}>
+      <ProjectsContext.Provider value={context}>
         <div className="app">
           <Route exact path="/">
             <Header />
@@ -68,7 +67,7 @@ export default class App extends Component {
                 <button className="start-posting">Post Ideas </button>
               </Link>
             </div>
-            <img className="earth" src={earth}></img>
+            <img className="earth" alt="earth" src={earth}></img>
           </Route>
           <Route
             path="/discover"
@@ -91,7 +90,7 @@ export default class App extends Component {
             }}
           />
         </div>
-      </PostsContext.Provider>
+      </ProjectsContext.Provider>
     );
   }
 }

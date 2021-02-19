@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Header from "../Header/Header.js";
 import "./PostPage.css";
 import config from "../config.js";
-import PostsContext from "../postsContext";
+import ProjectsContext from "../ProjectsContext";
 
 export default class Post extends Component {
   constructor(props) {
@@ -14,7 +14,7 @@ export default class Post extends Component {
     this.handleSortChange = this.handleSortChange.bind(this);
   }
 
-  static contextType = PostsContext;
+  static contextType = ProjectsContext;
 
   handleSortChange(event) {
     this.setState({ value: event.target.value });
@@ -23,7 +23,7 @@ export default class Post extends Component {
   handlePostProject = (e) => {
     e.preventDefault();
     const project = {
-      name: e.target["name"].value,
+      name: e.target["name"].value.trim(),
       description: e.target["description"].value,
       features: e.target["features"].value,
       topic: e.target["topic"].value,
@@ -47,10 +47,7 @@ export default class Post extends Component {
         return res.json();
       })
       .then((data) => {
-        console.log(data);
         this.context.addProject(data);
-        console.log(this.context.projects);
-        console.log(this.props.projects);
         window.location.reload();
       })
       .catch((error) => {
