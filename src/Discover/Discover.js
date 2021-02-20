@@ -12,7 +12,7 @@ export default class Discover extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: "date",
+      value: "old",
       sortedResults: this.props.projects,
       searched: "",
     };
@@ -40,8 +40,13 @@ export default class Discover extends Component {
     e.preventDefault();
     const { searched } = this.state;
     const projectsFoundFromSearch = (projects = [], projectName) =>
-      projects.filter((project) => project.name.toLowerCase().includes(projectName.toLowerCase()));
-    let sortedResults = projectsFoundFromSearch(this.props.projects, searched);
+      projects.filter((project) =>
+        project.name.toLowerCase().includes(projectName.toLowerCase())
+      );
+    let sortedResults = projectsFoundFromSearch(
+      this.context.projects,
+      searched
+    );
     this.setState({ sortedResults });
   };
 
@@ -50,7 +55,9 @@ export default class Discover extends Component {
   };
 
   render() {
-    const projects = this.state.sortedResults || this.context.projects;
+    const projects = (this.state.sortedResults && this.state.sortedResults.length)
+      ? this.state.sortedResults
+      : this.context.projects;
     return (
       <div className="discover">
         <Header />
@@ -71,8 +78,8 @@ export default class Discover extends Component {
           value={this.state.value}
           onChange={this.handleSortChange}
         >
-          <option value="recent">Most Recent</option>
           <option value="old">Oldest</option>
+          <option value="recent">Most Recent</option>
           <option value="alpha">Alphabetical</option>
           <option value="likes">Most liked</option>
           <option value="academic">Academic</option>
