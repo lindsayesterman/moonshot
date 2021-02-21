@@ -65,6 +65,7 @@ export default class Post extends Component {
         >
           <h1 className="post-h1">Post a project</h1>
           <div className="form-input-material">
+            <label for="name">Name:</label>
             <input
               type="text"
               name="name"
@@ -74,6 +75,7 @@ export default class Post extends Component {
             />
           </div>
           <div className="form-input-material">
+            <label for="description">Description:</label>
             <textarea
               type="text"
               name="description"
@@ -81,12 +83,14 @@ export default class Post extends Component {
               placeholder="App that allows users to post weekly screentimes and compete with friends for the lowest times of the week."
               required
             />
+            <label for="features">Features:</label>
             <input
               type="text"
               name="features"
               id="features"
               placeholder="Make friends, compete for times."
             />
+            <label for="topic">Topic:</label>
             <select
               id="topic"
               value={this.state.value}
@@ -101,6 +105,7 @@ export default class Post extends Component {
               <option value="work">Work</option>
               <option value="other">Other</option>
             </select>
+            <label for="creator">Creator:</label>
             <input
               type="text"
               name="author"

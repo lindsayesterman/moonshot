@@ -3,9 +3,9 @@
   margin: 0 auto;
   padding: 50px 40px;
   color: white;
-  width: 45%;
-  height: 550px;
-  background: rgba(0, 0, 0, 0.8);
+  width: 65%;
+  height: 750px;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
 
@@ -14,18 +14,25 @@ h1.post-h1 {
 }
 
 input,
-textarea, select {
+textarea,
+select {
   display: block;
-  margin: 25px auto;
-  width: 75%;
+  margin: 20px auto;
+  width: 80%;
   height: 30px;
   padding: 10px;
-  color:black;
+  color: black;
+}
+
+label {
+  display: block;
+  margin: auto;
+  width: 80%;
 }
 
 select {
-  height:50px;
-  width:78%;
+  height: 50px;
+  width:82%;
 }
 
 textarea {
@@ -44,11 +51,15 @@ button.btn-post {
 @media (max-width: 600px) {
   .project-proposal {
     width: 70%;
-    height: 600px;
+    height: 700px;
   }
   input,
   textarea,
-  button, select {
-    width: 80%;
+  button {
+    width: 90%;
+  }
+
+  select{
+    width:100%;
   }
 }

@@ -4,15 +4,32 @@ select#sort {
   color: black;
   display: block;
   padding: 8px;
-  margin:0 auto;
+  margin: 0 auto;
   border-radius: 8px;
 }
 
-button.subSearch{
-  display: block;
-  margin:20px auto;
-  width:100px;
-  height:30px;
-  color:black;
+form.searchBar input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid #ccc;
+  width: 80%;
+  background: #f1f1f1;
 }
 
+form.searchBar button {
+  width: 17%;
+  padding: 10px;
+  background: rgb(51, 88, 110);
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  cursor: pointer;
+  display:block;
+  margin:20px auto;
+}
+
+@media (max-width:449px){
+  form.searchBar button {
+    width:30%;
+  }
+}

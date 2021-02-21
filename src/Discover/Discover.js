@@ -61,7 +61,7 @@ export default class Discover extends Component {
     return (
       <div className="discover">
         <Header />
-        <form onSubmit={(e) => this.handleSearchProject(e)}>
+        <form className="searchBar" onSubmit={(e) => this.handleSearchProject(e)}>
           <input
             type="text"
             name="searched"
@@ -70,7 +70,7 @@ export default class Discover extends Component {
             placeholder="Screentime Saver"
           ></input>
           <button className="subSearch" type="submit">
-            Search
+          Search
           </button>
         </form>
         <select
