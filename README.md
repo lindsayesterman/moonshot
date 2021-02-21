@@ -8,17 +8,19 @@ Project Finder helps developers find project ideas to build up their portfolios.
 
 I made this app because I like spending my time solving actual problems. It can be hard to come up with a good idea for a project yourself so Project Finder allows more communication and classification of ideas to work with.
 
-Check out the site: 
+**Check out the site:** 
 
 ![landing page](./src/read-me-imgs/landingPageSS.png)
 
-Post some ideas: 
+**Post some ideas:**
 
 ![post ideas page](./src/read-me-imgs/postPageSS.png)
 
-Discover:
+**Discover:**
 
 ![browsing page](./src/read-me-imgs/discoverPageSS.png)
 
-Stack: React, CSS, Node, Express, PostgreSQL
+**Stack:**
+
+React, CSS, Node, Express, PostgreSQL
 
