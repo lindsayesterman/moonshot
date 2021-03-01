@@ -1,11 +1,10 @@
 select#sort {
-  width: 50%;
-  background-color: white;
-  color: black;
+  position: relative;
   display: block;
-  padding: 8px;
+  width: 60%;
   margin: 0 auto;
-  border-radius: 8px;
+  font-size: 16px;
+  color: #60666d;
 }
 
 form.searchBar input[type=text] {
